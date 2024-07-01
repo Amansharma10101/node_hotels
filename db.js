@@ -1,9 +1,16 @@
     const mongoose = require('mongoose');
 
-    const mongoURL = 'mongodb://localhost:27017/hotels'
+   //const mongoURL = 'process.env.MONGODB_URL_LOCAL'
 
-    mongoose.connect(mongoURL,{
-        //useNewParser:true,
+
+   const mongoURL = process.env.MONGODB_URL; 
+   //'mongodb+srv://amansharma21ash:amangaZab99pass@cluster0.cm47yec.mongodb.net/hotels?retryWrites=true&w=majority&tls=true'
+
+
+
+
+mongoose.connect(mongoURL,{
+        useNewUrlParser: true,
         useUnifiedTopology:true
     })
 
