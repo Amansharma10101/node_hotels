@@ -3,7 +3,7 @@
    //const mongoURL = 'process.env.MONGODB_URL_LOCAL'
 
 
-   const mongoURL = process.env.MONGODB_URL; 
+   const mongoURL = process.env.MONGODB_URL ;
    //'mongodb+srv://amansharma21ash:amangaZab99pass@cluster0.cm47yec.mongodb.net/hotels?retryWrites=true&w=majority&tls=true'
 
 
