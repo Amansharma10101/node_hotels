@@ -1,7 +1,24 @@
+const fs = require('fs');
+const path = require('path');
+
+console.log('Current directory:', __dirname);
+
+fs.readdir(path.join(__dirname, '../models'), (err, files) => {
+    if (err) {
+        console.error('Error reading models directory:', err);
+    } else {
+        console.log('Files in models directory:', files);
+    }
+});
+
+
+
+
+
 const express = require('express');
 const router = express.Router();
 
-const Person = require('./../models/Person');
+const Person = require('./../models/person');
 
 router.post('/', async (req, res) => {
     try {
